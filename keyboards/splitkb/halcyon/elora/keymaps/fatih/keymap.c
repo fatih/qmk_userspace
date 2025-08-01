@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Base Layer: QWERTY
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |   =+   |   1  |   2  |   3  |   4  |   5  |                              |   6  |   7  |   8  |   9  |   0  |  -_    |
+ * |  ` ~   |   1  |   2  |   3  |   4  |   5  |                              |   6  |   7  |   8  |   9  |   0  |  -_    |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |  Tab   |   Q  |   W  |   E  |   R  |   T  |                              |   Y  |   U  |   I  |   O  |   P  |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
@@ -49,10 +49,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_QWERTY] = LAYOUT_elora_hlc(
-     KC_EQL  ,       KC_1 ,  KC_2   ,  KC_3  ,   KC_4 ,            KC_5 ,                                         KC_6 ,  KC_7 ,  KC_8 ,   KC_9 ,   KC_0 ,   KC_MINS,
+     KC_GRAVE,       KC_1 ,  KC_2   ,  KC_3  ,   KC_4 ,            KC_5 ,                                         KC_6 ,  KC_7 ,  KC_8 ,   KC_9 ,   KC_0 ,   KC_MINS,
      KC_TAB  ,       KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,            KC_T ,                                         KC_Y,   KC_U ,  KC_I ,   KC_O ,   KC_P ,   KC_BSLS,
      KC_LCTL ,       KC_A ,  KC_S   ,  KC_D  ,   LT(_NUMPAD,KC_F), KC_G,                                          KC_H,   KC_J ,  KC_K ,   KC_L ,   KC_SCLN, CTL_QUOT,
-     KC_LALT , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,            KC_B , OSM(MOD_LSFT), MACLOCK,     KC_ESC  , OSM(MOD_RSFT), KC_N,   KC_M ,  KC_COMM, KC_DOT,  KC_SLSH, KC_RALT,
+     OSM(MOD_LALT) , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,            KC_B , OSM(MOD_LSFT), MACLOCK,     KC_ESC  , OSM(MOD_RSFT), KC_N,   KC_M ,  KC_COMM, KC_DOT,  KC_SLSH, OSM(MOD_RALT),
                                 KC_LEFT , KC_RIGHT, KC_LGUI, KC_BSPC , HYPR(KC_5),             HYPR(KC_8), KC_ENT ,LT(_SYMBOLS, KC_SPC), KC_UP, KC_DOWN,
      KC_MUTE, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MUTE, KC_NO, KC_NO, KC_NO, KC_NO
     ),
@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, _______, _______, _______, _______, _______,                                     _______, KC_KP_7, KC_KP_8, KC_KP_9, KC_KP_ASTERISK, _______,
       _______, _______, _______, _______, _______, _______,                                     _______, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_PLUS, _______,
       _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______,_______, KC_KP_1, KC_KP_2, KC_KP_3, KC_SLSH, _______,
-                                 _______, _______, _______, KC_SPC, KC_BSPC,  _______, KC_ENT, KC_KP_0, _______, _______,
+                                 _______, _______, KC_SPC, KC_BSPC, _______,  _______, KC_ENT, KC_KP_0, _______, _______,
      _______, _______,  _______, _______, _______,                                                       _______, _______, _______, _______, _______
     ),
 
@@ -89,13 +89,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Symbol Layer
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |      |      |      |      |      |                              |  F1  |  F2  |      |      |      | BOOT   |
+ * |    =   |      |      |      |      |      |                              |  F1  |  F2  |      |      |      | BOOT   |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |   !  |   @  |   {  |  {   |   |  |                              |      |      |      |      |  *   |        |
+ * |    -   |   !  |   @  |   {  |   {  |   |  |                              |      |      |      |      |  *   |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |   &  |   $  |   (  |  )   |  `   |                              | Left | Down | Up   | Right|      |        |
+ * |    _   |   &  |   $  |   (  |   )  |  `   |                              | Left | Down | Up   | Right|      |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        |   #  |   ^  |   [  |   ]  |  ~   |      |      |  |      |      |  _   |  -   |  =   |   %  |      |        |
+ * |    %   |   #  |   ^  |   [  |   ]  |  ~   |      |      |  |      |      |  _   |  -   |  =   |   %  |      |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        |      |      |      |      |      |  |      |      |      |      |      |
@@ -105,10 +105,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_SYMBOLS] = LAYOUT_elora_hlc(
-      _______, _______, _______, _______, _______, _______,                                      KC_F1,   KC_F2   , _______ ,  _______  ,  _______, QK_BOOT,
-      _______, KC_EXLM,  KC_AT , KC_LCBR, KC_RCBR ,KC_PIPE ,                                     _______, _______ , _______ ,  _______  , KC_ASTR , _______,
-      _______, KC_AMPR,  KC_DLR, KC_LPRN, KC_RPRN, KC_GRAVE,                                     KC_LEFT, KC_DOWN , KC_UP   , KC_RIGHT  ,  _______, _______,
-      _______, KC_HASH, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILDE, _______, _______, _______, _______, KC_UNDS, KC_MINUS, KC_EQUAL, KC_PERCENT,  _______, _______,
+      KC_EQUAL,   _______, _______, _______, _______, _______,                                      KC_F1,   KC_F2   , _______ ,  _______  ,  _______, QK_BOOT,
+      KC_MINUS,   KC_EXLM,  KC_AT , KC_LCBR, KC_RCBR ,KC_PIPE ,                                     _______, _______ , _______ ,  _______  , KC_ASTR , _______,
+      KC_UNDS,    KC_AMPR,  KC_DLR, KC_LPRN, KC_RPRN, KC_GRAVE,                                     KC_LEFT, KC_DOWN , KC_UP   , KC_RIGHT  ,  _______, _______,
+      KC_PERCENT, KC_HASH, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILDE, _______, _______, _______, _______, KC_UNDS, KC_MINUS, KC_EQUAL, KC_PERCENT,  _______, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
      _______, _______,  _______, _______, _______,                                                       _______, _______, _______, _______, _______
     ),
