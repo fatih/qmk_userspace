@@ -141,8 +141,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [1] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
-    [2] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
+    //                   Left built-in (idx 0)          Left HLC encoder (idx 1)         Right built-in (idx 2)           Right HLC encoder (idx 3)
+    [_QWERTY]  = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(MS_WHLD, MS_WHLU),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
+    [_NUMPAD]  = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
+    [_SYMBOLS] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(KC_BRID, KC_BRIU),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
 };
 #endif
