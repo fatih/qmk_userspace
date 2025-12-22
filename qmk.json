@@ -5,16 +5,8 @@
             "splitkb/halcyon/elora/rev2",
             "fatih",
             {
-                "HLC_TFT_DISPLAY": "1",
-                "TARGET": "splitkb_halcyon_elora_rev2_default_hlc_display"
-            }
-        ],
-        [
-            "splitkb/halcyon/elora/rev2",
-            "fatih",
-            {
                 "HLC_ENCODER": "1",
-                "TARGET": "splitkb_halcyon_elora_rev2_default_hlc_encoder"
+                "TARGET": "splitkb_halcyon_elora_rev2_fatih_encoder"
             }
         ]
     ]
