@@ -144,6 +144,6 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     //                   Left built-in (idx 0)          Left HLC encoder (idx 1)         Right built-in (idx 2)           Right HLC encoder (idx 3)
     [_QWERTY]  = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(MS_WHLD, MS_WHLU),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
     [_NUMPAD]  = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
-    [_SYMBOLS] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(KC_BRID, KC_BRIU),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
+    [_SYMBOLS] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(KC_F1,   KC_F2  ),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
 };
 #endif
