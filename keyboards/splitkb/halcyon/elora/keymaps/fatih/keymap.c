@@ -139,6 +139,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //
 };
 
+// Per-key tapping term: longer for home row mods (G and H) to prevent accidental shifts
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LSFT_T(KC_G):
+        case RSFT_T(KC_H):
+            return 280;  // Longer term for home row shift keys
+        default:
+            return TAPPING_TERM;  // 200ms for everything else
+    }
+}
+
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     //                   Left built-in (idx 0)          Left HLC encoder (idx 1)         Right built-in (idx 2)           Right HLC encoder (idx 3)
